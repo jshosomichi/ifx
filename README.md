@@ -7,7 +7,7 @@ It can be alternative to conditional operator.
 # import  
 
 Sorry, I had yet to register NPM.
-To use it, please clone this repository.
+To use it, please cloning this repository and put under node_modules.
 
 ```js
 var If = require('ifx');
