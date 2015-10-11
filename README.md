@@ -4,6 +4,15 @@ ifx is a JavaScript module that provides if-expression to return a value.
 It can also run on legacy JavaScript engine.   
 It can be alternative to conditional operator.  
 
+# import  
+
+Sorry, I had yet to register NPM.
+To use it, please clone this repository.
+
+```js
+var If = require('ifx');
+```
+
 # Quick Example
 
 - ES6 syntax (recommend)
@@ -38,12 +47,6 @@ var x = If(false)(function () { return 1 })
     .Else(function () { return 3 });
 
 console.log(x);  // 2
-```
-
-# import  
-
-```js
-var If = require('ifx');
 ```
 
 # API
