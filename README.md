@@ -1,4 +1,4 @@
-# Ifx
+# What's Ifx?
 
 ifx is a JavaScript module that provides if-expression to return a value.   
 It can also run on legacy JavaScript engine.   
@@ -10,7 +10,7 @@ It can be alternative to conditional operator.
 
 ```js
 // stateless and readable to use ES6 arrow function
-const x = If(false)(() => 1).ElseIf(true)(() =>2).Else(() => 3);  
+const x = If(false)(() => 1).ElseIf(true)(() => 2).Else(() => 3);  
 console.log(x);
 ```
 
