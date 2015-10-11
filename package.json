@@ -1,0 +1,14 @@
+{
+  "name": "ifx",
+  "version": "1.0.0",
+  "description": "Ifx is a JavaScript module that provides if-expression to return a value",
+  "main": "src/ifx.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "jshosomichi",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine": "^2.3.2"
+  }
+}
