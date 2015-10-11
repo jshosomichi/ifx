@@ -72,7 +72,7 @@ try {If(true)(1).Get()} catch(e) {console.log(e)}   // [Error: If() con be appli
 
 - if you don't use `Else`, `Get` gets rerutning value.
 
-### Sample
+#### Sample
 
 ```js
 // If(true)
@@ -87,7 +87,7 @@ console.log(If(false)(() => 1).Get());  // null
 -  `Else
 - When use `Else`, `Get` is unnecessary.
 
-### Sample
+#### Sample
 
 ```js
 // If + Else
@@ -97,6 +97,8 @@ console.log(If(false)(() => 1).Else(() => 2));  // 2
 ## .ElseIf = condition -> expected function -> object`
 
 - If you need conditions more than once,  chain `ElseIf` and returned objects.
+
+#### Sample
 
 ```js
 // If + ElseIf + Get
