@@ -46,7 +46,8 @@ console.log(x);  // 2
 var If = require('ifx');
 ```
 
-# If = condition -> expected value -> object`
+# API
+## If = condition -> expected function -> object`
 
 - `If` is a curried function.
 - returned object has methods `Else/ElseIF/Get`
@@ -67,7 +68,7 @@ try {If()(() => 1).Get()} catch(e) {console.log(e)}   // [Error: If connot be ap
 try {If(true)(1).Get()} catch(e) {console.log(e)}   // [Error: If() con be applied to a function only]
 ```
 
-# .Get = () -> value
+## .Get = () -> value
 
 - if you don't use `Else`, `Get` gets rerutning value.
 
@@ -81,7 +82,7 @@ console.log(If(true)(() => 1).Get());   // 1
 console.log(If(false)(() => 1).Get());  // null
 ```
 
-# .Else = value -> value`
+## .Else = function -> value`
 
 -  `Else
 - When use `Else`, `Get` is unnecessary.
@@ -93,7 +94,7 @@ console.log(If(false)(() => 1).Get());  // null
 console.log(If(false)(() => 1).Else(() => 2));  // 2
 ```
 
-# .ElseIf = condition -> expected value -> object`
+## .ElseIf = condition -> expected function -> object`
 
 - If you need conditions more than once,  chain `ElseIf` and returned objects.
 
