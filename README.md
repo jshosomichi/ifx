@@ -138,8 +138,8 @@ console.log(If(false)(() => 1).ElseIf(false)(() => 2).ElseIf(false)(() => 3).Get
 ​
 **jshosomichi**
 
-[github](https://github.com/jshosomichi)
-[twitter](https://twitter.com/jshosomichi)
+- [github](https://github.com/jshosomichi)
+- [twitter](https://twitter.com/jshosomichi)
 
 ## License
 
