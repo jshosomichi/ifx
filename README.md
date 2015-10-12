@@ -136,8 +136,8 @@ console.log(If(false)(() => 1).ElseIf(false)(() => 2).ElseIf(false)(() => 3).Get
 
 ## Author
 ​
-- [github/jshosomichi](https://github.com/jshosomichi)  
-- [twitter/jshosomichi](https://twitter.com/jshosomichi)  
+- [github/jshosomichi](https://github.com/jshosomichi)
+- [twitter/jshosomichi](https://twitter.com/jshosomichi)
 
 ## License
 
