@@ -60,7 +60,7 @@ console.log(x);  // 2
 ```
 
 ## API
-### If = condition -> expected function -> object`
+### If = condition -> expected function -> object
 
 - `If` is a curried function.
 - returned object has methods `Else/ElseIF/Get`
@@ -102,7 +102,7 @@ console.log(If(false)(() => 1).Get());  // null
 console.log(If(false)(() => 1).Else(() => 2));  // 2
 ```
 
-### .ElseIf = condition -> expected function -> object`
+### .ElseIf = condition -> expected function -> object
 
 - If you need conditions more than once,  chain `ElseIf` and returned objects.
 
@@ -136,6 +136,8 @@ console.log(If(false)(() => 1).ElseIf(false)(() => 2).ElseIf(false)(() => 3).Get
 
 ## Author
 ​
+**jshosomichi**
+
 - [github/jshosomichi](https://github.com/jshosomichi)
 - [twitter/jshosomichi](https://twitter.com/jshosomichi)
 
