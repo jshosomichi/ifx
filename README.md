@@ -1,29 +1,26 @@
 # What's Ifx?
 
 ifx is a JavaScript module that provides if-expression to return a value.   
-It can also run on legacy JavaScript engine.   
 It can be alternative to conditional operator.  
 
-# import  
+# Example Usage  
 
 Sorry, I had yet to register NPM.
 To use it, please cloning this repository and put under node_modules.
 
-```js
-var If = require('ifx');
-```
-
-# Quick Example
-
 - ES6 syntax (recommend)
 
 ```js
+const If = require('ifx');
+
 // stateless and readable to use ES6 arrow function
 const x = If(false)(() => 1).ElseIf(true)(() => 2).Else(() => 3);  
 console.log(x);
 ```
 
 ```js
+const If = require('ifx');
+
 // can be return value
 const fn = value =>
   If(value instanceof Array)(() =>
@@ -39,9 +36,22 @@ console.log(fn({a: 1, b: 2, c: 3}));  // [ 'a', 'b', 'c' ]
 console.log(fn(2));                   // []
 ```
 
+```js
+const If = require('ifx');
+
+function getFib(x) {
+  const fn = (n, p, c) => If(n === 1)(() => p).Else(() => fn(--n, c, c + p));
+  return If(x > 0)(() => fn(x, 0, 1)).Get();
+}
+
+console.log([0,1,2,3,4,5,6,7,8,9,10,11].map(i => getFib(i)));  // [ null, 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ]
+```
+
 - ES5 syntax
 
 ```js
+var If = require('ifx');
+
 var x = If(false)(function () { return 1 })
     .ElseIf(true)(function () { return 2 })
     .Else(function () { return 3 });
@@ -75,8 +85,6 @@ try {If(true)(1).Get()} catch(e) {console.log(e)}   // [Error: If() con be appli
 
 - if you don't use `Else`, `Get` gets rerutning value.
 
-#### Sample
-
 ```js
 // If(true)
 console.log(If(true)(() => 1).Get());   // 1
@@ -87,10 +95,7 @@ console.log(If(false)(() => 1).Get());  // null
 
 ## .Else = function -> value`
 
--  `Else
 - When use `Else`, `Get` is unnecessary.
-
-#### Sample
 
 ```js
 // If + Else
@@ -100,8 +105,6 @@ console.log(If(false)(() => 1).Else(() => 2));  // 2
 ## .ElseIf = condition -> expected function -> object`
 
 - If you need conditions more than once,  chain `ElseIf` and returned objects.
-
-#### Sample
 
 ```js
 // If + ElseIf + Get
@@ -130,3 +133,14 @@ console.log(If(false)(() => 1).ElseIf(false)(() => 2).ElseIf(true)(() => 3).Get(
 console.log(If(false)(() => 1).ElseIf(false)(() => 2).Get());                        // null
 console.log(If(false)(() => 1).ElseIf(false)(() => 2).ElseIf(false)(() => 3).Get()); // null
 ```
+
+## Author
+​
+**jshosomichi**
+
+[github](https://github.com/jshosomichi)
+[twitter](https://twitter.com/jshosomichi)
+
+## License
+
+under the MIT license.
