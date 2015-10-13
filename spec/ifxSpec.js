@@ -7,24 +7,12 @@ describe('Ifx', function () {
       expect(If(true)(function() {return 1}) instanceof Object).toBeTruthy();
     });
 
-    it('undefined -> cause error', function () {
-      var result;
-      try {
-        If();
-      } catch (e) {
-        result = e;
-      }
-      expect(result instanceof Error).toBeTruthy();
+    it('undefined -> a -> object', function () {
+      expect(If()(function() {return 1}).Else(function() {return 10})).toBe(10);
     });
 
-    it('null -> cause error', function () {
-      var result;
-      try {
-        If(null);
-      } catch (e) {
-        result = e;
-      }
-      expect(result instanceof Error).toBeTruthy();
+    it('null -> a -> object', function () {
+      expect(If(null)(function() {return 1}).Else(function() {return 10})).toBe(10);
     });
   });
 

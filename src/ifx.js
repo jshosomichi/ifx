@@ -1,22 +1,21 @@
-'use strict'
+'use strict';
 
-var If = function (bool, _fixed, _truthy, _fixedValue) {
-  var isEmpty = function (value) {
-      return value === null || value === undefined;
-    },
-    isFunction = function (value) {
-      return (value instanceof Function);
-    },
-    fixed = isEmpty(_fixed) ? false : _fixed,
-    truthy = isEmpty(_truthy) ? false : _truthy,
-    fixedValue = isEmpty(_fixedValue) ? undefined : _fixedValue;
+var If = function (condition, _fixed, _truthy, _fixedValue) {
 
-  if (isEmpty(bool)) {
-    throw new Error('If cannot be applied to an empty value');
+  function isEmpty(value) {
+    return value === null || value === undefined;
   }
 
+  function isFunction(value) {
+    return (value instanceof Function);
+  }
+
+  var fixed = isEmpty(_fixed) ? false : _fixed,
+      truthy = isEmpty(_truthy) ? false : _truthy,
+      fixedValue = isEmpty(_fixedValue) ? undefined : _fixedValue;
+
   if (!fixed) {
-    truthy = bool ? true : false;
+    truthy = condition ? true : false;
   }
 
   return function (callback) {
@@ -32,9 +31,8 @@ var If = function (bool, _fixed, _truthy, _fixedValue) {
       Get: function () {
         if (fixed) {
           return fixedValue;
-        } else {
-          return null;
         }
+        return null;
       },
       Else: function (callback) {
         if (isFunction(callback)) {
@@ -47,11 +45,8 @@ var If = function (bool, _fixed, _truthy, _fixedValue) {
           throw new Error('Else can be applied to a function only');
         }
       },
-      ElseIf: function (bool) {
-        if (isEmpty(bool)) {
-          throw new Error('ElseIf cannot be applied to an empty value');
-        }
-        return If(bool, fixed, truthy, fixedValue);
+      ElseIf: function (condition) {
+        return If(condition, fixed, truthy, fixedValue);
       }
     };
   };
