@@ -1,21 +1,22 @@
 # Ifx?
 
-ifx is a JavaScript module that provides "if-expression" to return a value.   
-It can be alternative to ternary operator.  
+ifx is a JavaScript module that provides "if-expression" to return a value.
+It can be alternative to ternary operator.
 
 ## Motivation
 I want to use "if-expression" like a scala's if.
 
-## Usage  
+## Usage
 
-Sorry, I haven't yet registered to NPM.
-When you use it, please cloning this repository and put it under a directory in node_modules.
+```
+npm install ifx
+```
 
 - ES6 syntax (recommend)
 
 ```js
 // stateless and readable to use ES6 arrow function
-const x = If(false)(() => 1).ElseIf(true)(() => 2).Else(() => 3);  
+const x = If(false)(() => 1).ElseIf(true)(() => 2).Else(() => 3);
 console.log(x);
 ```
 
@@ -24,7 +25,7 @@ console.log(x);
 ```js
 // can be return value
 const fn = value =>
-  If(value instanceof Array)(() => value.map(x => 
+  If(value instanceof Array)(() => value.map(x =>
     If(typeof x === 'number')(() => x * 5).Get()))
   .ElseIf(value instanceof Object)(() => Object.keys(value))
   .Else(() => [])
