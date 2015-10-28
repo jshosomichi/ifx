@@ -1,6 +1,6 @@
 {
   "name": "ifx",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ifx is a JavaScript module that provides if-expression to return a value",
   "main": "src/ifx.js",
   "scripts": {
@@ -10,5 +10,9 @@
   "license": "MIT",
   "devDependencies": {
     "jasmine": "^2.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jshosomichi/ifx"
   }
 }
