@@ -8,9 +8,18 @@ I want to use "if-expression" like a scala's if.
 
 ## Usage
 
+- install
+
 ```
 npm install ifx
 ```
+
+- import
+
+```
+const If = require('ifx');
+```
+
 
 - ES6 syntax (recommend)
 
