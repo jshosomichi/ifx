@@ -4,7 +4,8 @@ ifx is a JavaScript module that provides "if-expression" to return a value.
 It can be alternative to ternary operator.
 
 ## Motivation
-I want to use "if-expression" like a scala's if.
+Use of ternary operators to express stateless values and functions tends to result in significantly diminished readability when applied to complicated nesting conditions or multiple conditions. 
+I wanted to use conditional branches built on JavaScript which return values in the same manner as the if-expression in Scala.
 
 ## Usage
 

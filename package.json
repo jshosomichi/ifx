@@ -1,6 +1,6 @@
 {
   "name": "ifx",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Ifx is a JavaScript module that provides if-expression to return a value",
   "main": "src/ifx.js",
   "scripts": {
