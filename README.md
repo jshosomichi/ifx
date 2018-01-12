@@ -114,6 +114,12 @@ console.log(If(false)(() => 1).ElseIf(false)(() => 2).ElseIf(false)(() => 3).Els
 try {If(true)(() => 1).ElseIf()(() => 2).Get()} catch(e) {console.log(e)}  // [Error: ElseIf connot be applied to an empty value]
 ```
 
+## TypeScript Import
+
+```
+import * as If from 'ifx';
+```
+
 ## about specs
 
 - It returns first matched value when conditions match more than once.
